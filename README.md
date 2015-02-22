@@ -1,2 +1,15 @@
 # Myo4Linux
 Direct bluetooth connection between Linux and Myo armband using Bluegiga BGAPI/BGLib
+
+Tested in a Raspberry Pi. video: https://www.youtube.com/watch?v=XVCfGHIiGXw
+
+Thanks to dzhu (https://github.com/dzhu/myo-raw), which greatly helped me improve my basic project.
+
+## Pre-requirements
+- It is necessary to calibrate your Myo device using the official software.
+- Use the Myo dongle bluetooth
+
+## Requirements
+- python >=2.6
+- pySerial
+- enum34
