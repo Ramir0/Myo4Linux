@@ -2,7 +2,7 @@ from utilities import *
 
 class DeviceListener(object):
 	def handle_data(self, data):
-		if data.cls != 4 and data.cmd != 5:
+		if data.cls != 4 and data.command != 5:
 			return
 
 		connection, attribute, data_type = unpack('BHB', data.payload[:4])
