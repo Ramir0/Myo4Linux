@@ -1,7 +1,8 @@
 import re
 from ble import BLE
-from utilities import *
 from serial.tools.list_ports import comports
+from utilities import *
+from vibration_type import VibrationType
 
 class Myo(object):
 
@@ -67,12 +68,15 @@ class Myo(object):
 
     def vibrate(self, duration):
         cmd = b'\x03\x01'
-        if duration == "short":
-            cmd = cmd + b'\x01'
-        elif duration == "medium":
-            cmd = cmd + b'\x02'
-        else:
+        if duration == VibrationType.LONG:
             cmd = cmd + b'\x03'
+        elif duration == VibrationType.MEDIUM:
+            cmd = cmd + b'\x02'
+        elif duration == VibrationType.SHORT:
+            cmd = cmd + b'\x01'
+        else:
+            cmd = cmd + b'\x00'
+            
         self.write_attribute(0x19, cmd)
 
     def initialize(self):

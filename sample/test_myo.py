@@ -3,6 +3,7 @@ sys.path.append('../lib/')
 
 from myo import Myo
 from print_pose_listener import PrintPoseListener
+from vibration_type import VibrationType
 
 def main():
     print('Start Myo for Linux')
@@ -13,7 +14,7 @@ def main():
     try:
         myo.connect()
         myo.add_listener(listener)
-        myo.vibrate("short")
+        myo.vibrate(VibrationType.SHORT)
         while True:
             myo.run()
 
