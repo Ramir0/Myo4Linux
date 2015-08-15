@@ -9,7 +9,7 @@ class DeviceListener(object):
 		payload = data.payload[5:]
 
 		if attribute == 0x23:
-			data_type, value, address = unpack('3B', payload)
+			data_type, value, address, _, _, _ = unpack('6B', payload)
 
 			if data_type == 3:
 				self.on_pose(value)
