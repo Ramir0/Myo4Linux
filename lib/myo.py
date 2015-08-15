@@ -65,6 +65,16 @@ class Myo(object):
         else:
             print('Connect function must be called before adding a listener.')
 
+    def vibrate(self, duration):
+        cmd = b'\x03\x01'
+        if duration == "short":
+            cmd = cmd + b'\x01'
+        elif duration == "medium":
+            cmd = cmd + b'\x02'
+        else:
+            cmd = cmd + b'\x03'
+        self.write_attribute(0x19, cmd)
+
     def initialize(self):
         self.write_attribute(0x28, b'\x01\x00')
         self.write_attribute(0x19, b'\x01\x03\x01\x01\x00')

@@ -13,7 +13,7 @@ def main():
     try:
         myo.connect()
         myo.add_listener(listener)
-
+        myo.vibrate("short")
         while True:
             myo.run()
 
