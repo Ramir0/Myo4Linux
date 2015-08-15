@@ -5,7 +5,8 @@ Tested in a Raspberry Pi. video: https://www.youtube.com/watch?v=XVCfGHIiGXw
 
 Thanks to dzhu (https://github.com/dzhu/myo-raw), which greatly helped me improve my basic project.
 
-## Pre-requirements
+## Pre-requirements for your Myo device
+- Firmware version 1.3.1448 or higher
 - It is necessary to calibrate your Myo device using the official software.
 - Use the Myo dongle bluetooth
 
