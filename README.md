@@ -14,3 +14,13 @@ Thanks to dzhu (https://github.com/dzhu/myo-raw), which greatly helped me improv
 - python >=2.6
 - pySerial
 - enum34
+
+## Execute Sample
+The Myo dongle bluetooth must be connected.
+
+- Open the console "terminal" 
+- Go to sample folder in the project
+- Execute this command:
+  ```
+  python test_myo.py
+  ```
